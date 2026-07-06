@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Gupta — Full-Stack Developer | AI & ML</title>
+    <meta name="description"
+        content="Gaurav Gupta — AI & ML Undergraduate, Full-Stack Developer, and Open Source Contributor. Explore my portfolio showcasing projects, skills, and experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Floating particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation: editor tab-bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-window-dots"><i></i><i></i><i></i></span>
+                <span class="logo-text">gaurav<span class="logo-accent">.dev</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link" data-ext="about.md">About</a></li>
+                <li><a href="#skills" class="nav-link" data-ext="skills.json">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-ext="projects.tsx">Projects</a></li>
+                <li><a href="#experience" class="nav-link" data-ext="experience.log">Experience</a></li>
+                <li><a href="#education" class="nav-link" data-ext="education.yml">Education</a></li>
+                <li><a href="#contact" class="nav-link" data-ext="contact.sh">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cmdk-trigger" id="cmdkTrigger" aria-label="Open command palette">
+                    <span>Quick jump</span><kbd>&#8984; K</kbd>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <!-- Ballpit Canvas Background -->
+        <div id="ballpit-container"
+            style="position: absolute; inset: 0; overflow: hidden; pointer-events: auto; z-index: 1;">
+            <canvas id="ballpit-canvas" style="display: block; width: 100%; height: 100%;"></canvas>
+        </div>
+        <div class="hero-bg-grid" style="z-index: 0;"></div>
+        <div class="hero-content">
+            <div class="hero-editor-window animate-in">
+                <div class="editor-titlebar">
+                    <div class="editor-dots"><span></span><span></span><span></span></div>
+                    <div class="editor-tab"><i class="fas fa-file-code"></i> portfolio.ts</div>
+                    <div class="editor-status"><span class="status-dot"></span> Available for opportunities</div>
+                </div>
+                <div class="editor-body">
+                    <div class="code-row"><span class="ln">1</span><span class="code-comment">// initializing developer
+                            profile</span></div>
+                    <div class="code-row"><span class="ln">2</span><span class="code-kw">const</span>&nbsp;<span
+                            class="code-var">gaurav</span>&nbsp;<span class="code-punc">=</span>&nbsp;<span
+                            class="code-punc">{</span></div>
+                    <div class="code-row name-row"><span class="ln">3</span><span
+                            class="code-key">&nbsp;&nbsp;name:</span>&nbsp;<span class="hero-name-value">Gaurav
+                            Gupta</span><span class="code-punc">,</span></div>
+                    <div class="code-row"><span class="ln">4</span><span
+                            class="code-key">&nbsp;&nbsp;role:</span>&nbsp;<span class="code-string">"<span
+                                class="typed-text" id="typedText"></span><span
+                                class="typed-cursor">|</span>"</span><span class="code-punc">,</span></div>
+                    <div class="code-row desc-row"><span class="ln">5</span><span
+                            class="code-key">&nbsp;&nbsp;summary:</span>&nbsp;<span class="hero-description">"Motivated
+                            Computer Science (AI &amp; ML) undergraduate building scalable applications and solving
+                            real-world problems through full-stack development and open-source contributions."</span>
+                    </div>
+                    <div class="code-row"><span class="ln">6</span><span class="code-punc">};</span></div>
+                </div>
+            </div>
+            <div class="hero-cta animate-in">
+                <a href="#projects" class="btn btn-primary">
+                    <span>open ./projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>open ./contact</span>
+                </a>
+            </div>
+            <div class="hero-stats animate-in">
+                <div class="stat">
+                    <span class="stat-number" data-target="450">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">LeetCode Problems</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="350">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">GFG Problems</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Major Projects</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-user"></i> about.md</span>
+                <h2 class="section-title">Passionate Developer &<br>Problem Solver</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-container">
+                    <div class="about-image-wrapper">
+                        <img src="assets/profile.png" alt="Gaurav Gupta" class="about-image">
+                        <div class="about-image-border"></div>
+                    </div>
+                    <div class="about-social-links">
+                        <a href="https://github.com/gauravgupta654" target="_blank" rel="noopener" class="social-link"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/gaurav-gupta-960027286/" target="_blank" rel="noopener"
+                            class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://leetcode.com/u/gauravgupta654/" target="_blank" rel="noopener"
+                            class="social-link" aria-label="LeetCode">
+                            <i class="fas fa-code"></i>
+                        </a>
+                        <a href="https://vibexpert.shop" target="_blank" rel="noopener" class="social-link"
+                            aria-label="Website">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm a <strong>Computer Science (AI & ML)</strong> undergraduate at <strong>VIT Bhopal
+                            University</strong>,
+                        passionate about building scalable applications and solving real-world problems. With a strong
+                        foundation in full-stack development and machine learning, I thrive on creating impactful
+                        solutions.
+                    </p>
+                    <p class="about-text">
+                        As an <strong>Open Source Contributor</strong> through GSSoC Extended and an <strong>eSim
+                            Chatbot Developer Intern</strong>
+                        at FOSSEE, IIT Bombay, I've gained hands-on experience working with cutting-edge technologies
+                        including
+                        LLMs, React, Node.js, and cloud services.
+                    </p>
+                    <div class="about-highlights reveal">
+                        <div class="highlight-card spotlight">
+                            <div class="highlight-icon"><i class="fas fa-trophy"></i></div>
+                            <div>
+                                <h4>Top 3%</h4>
+                                <p>Ninja SlayGround 2.0</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card spotlight">
+                            <div class="highlight-icon"><i class="fas fa-fire"></i></div>
+                            <div>
+                                <h4>200-Day Streak</h4>
+                                <p>GeeksforGeeks</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card spotlight">
+                            <div class="highlight-icon"><i class="fas fa-certificate"></i></div>
+                            <div>
+                                <h4>Postman Expert</h4>
+                                <p>API Fundamentals</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card spotlight">
+                            <div class="highlight-icon"><i class="fas fa-calendar-check"></i></div>
+                            <div>
+                                <h4>100 Days</h4>
+                                <p>Coding Challenge</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-cogs"></i> skills.json</span>
+                <h2 class="section-title">Technologies &<br>Expertise</h2>
+            </div>
+            <div class="skills-interactive-container">
+                <div class="skills-sidebar">
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <h3>programming/</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-skill="Java"><i class="fab fa-java"></i> Java</span>
+                            <span class="skill-tag" data-skill="C++"><i class="fas fa-plus"></i> C++</span>
+                            <span class="skill-tag" data-skill="Python"><i class="fab fa-python"></i> Python</span>
+                            <span class="skill-tag" data-skill="JavaScript"><i class="fab fa-js-square"></i>
+                                JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <h3>frontend/</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-skill="HTML5"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="skill-tag" data-skill="CSS3"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="skill-tag" data-skill="React"><i class="fab fa-react"></i> React</span>
+                            <span class="skill-tag" data-skill="React Router"><i class="fas fa-route"></i> React
+                                Router</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <h3>backend/</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-skill="Node.js"><i class="fab fa-node-js"></i> Node.js</span>
+                            <span class="skill-tag" data-skill="Express.js"><i class="fas fa-rocket"></i>
+                                Express.js</span>
+                            <span class="skill-tag" data-skill="REST APIs"><i class="fas fa-plug"></i> REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <h3>databases/</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-skill="MySQL"><i class="fas fa-database"></i> MySQL</span>
+                            <span class="skill-tag" data-skill="MongoDB"><i class="fas fa-leaf"></i> MongoDB</span>
+                            <span class="skill-tag" data-skill="PostgreSQL"><i class="fas fa-elephant"></i>
+                                PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <h3>tools-devops/</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-skill="Git"><i class="fab fa-git-alt"></i> Git</span>
+                            <span class="skill-tag" data-skill="GitHub"><i class="fab fa-github"></i> GitHub</span>
+                            <span class="skill-tag" data-skill="AWS"><i class="fab fa-aws"></i> AWS</span>
+                            <span class="skill-tag" data-skill="Postman"><i class="fas fa-paper-plane"></i>
+                                Postman</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <h3>ai-ml-core/</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-skill="Machine Learning"><i class="fas fa-robot"></i> Machine
+                                Learning</span>
+                            <span class="skill-tag" data-skill="GenAI"><i class="fas fa-wand-magic-sparkles"></i>
+                                GenAI</span>
+                            <span class="skill-tag" data-skill="OOP"><i class="fas fa-cubes"></i> OOP</span>
+                            <span class="skill-tag" data-skill="LLMs"><i class="fas fa-comments"></i> LLMs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-detail-pane" id="skillDetailPane">
+                    <div class="skill-detail-empty">
+                        <i class="fas fa-hand-pointer"></i>
+                        <h3>Select a skill</h3>
+                        <p>Click on any skill to see where I've applied it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-rocket"></i> projects.tsx</span>
+                <h2 class="section-title">Featured<br>Work</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card project-card-featured">
+                    <div class="project-card-layout">
+                        <div class="project-card-info">
+                            <div class="project-number">01</div>
+                            <h3 class="project-title">VibExpert Shop</h3>
+                            <p class="project-role">Front-End Developer</p>
+                            <p class="project-desc">
+                                Designed and developed a responsive e-commerce platform using React.js with modern UI,
+                                category filtering, search functionality, and dynamic product detail pages.
+                            </p>
+                            <ul class="project-features">
+                                <li>Responsive layouts for desktop & mobile</li>
+                                <li>Dynamic product browsing & filtering</li>
+                                <li>Reusable component architecture</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://vibexpert.shop" target="_blank" rel="noopener" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Site
+                                </a>
+                                <a href="https://github.com/gauravgupta654" target="_blank" rel="noopener"
+                                    class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech-graph">
+                            <div class="tech-graph-label">Tech Stack</div>
+                            <div class="tech-pipeline">
+                                <div class="tech-pipeline-line">
+                                    <div class="tech-pipeline-arrow"></div>
+                                </div>
+                                <div class="tech-node" style="--delay:0">
+                                    <div class="tech-node-icon"><i class="fab fa-react"></i></div><span
+                                        class="tech-node-name">React.js</span>
+                                </div>
+                                <div class="tech-node" style="--delay:1">
+                                    <div class="tech-node-icon"><i class="fab fa-js-square"></i></div><span
+                                        class="tech-node-name">JavaScript</span>
+                                </div>
+                                <div class="tech-node" style="--delay:2">
+                                    <div class="tech-node-icon"><i class="fab fa-html5"></i></div><span
+                                        class="tech-node-name">HTML5</span>
+                                </div>
+                                <div class="tech-node" style="--delay:3">
+                                    <div class="tech-node-icon"><i class="fab fa-css3-alt"></i></div><span
+                                        class="tech-node-name">CSS3</span>
+                                </div>
+                                <div class="tech-node" style="--delay:4">
+                                    <div class="tech-node-icon"><i class="fas fa-plug"></i></div><span
+                                        class="tech-node-name">REST APIs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-card-layout">
+                        <div class="project-card-info">
+                            <div class="project-number">02</div>
+                            <h3 class="project-title">CarPooling</h3>
+                            <p class="project-role">Full-Stack Developer</p>
+                            <p class="project-desc">
+                                Built an eco-friendly ride-sharing platform with secure payments via PayPal and GPS
+                                integration.
+                                Engineered optimized architecture for improved scalability and user trust.
+                            </p>
+                            <ul class="project-features">
+                                <li>Secure PayPal payment integration</li>
+                                <li>GPS-based ride matching</li>
+                                <li>Optimized scalable architecture</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/gauravgupta654" target="_blank" rel="noopener"
+                                    class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech-graph">
+                            <div class="tech-graph-label">Tech Stack</div>
+                            <div class="tech-pipeline">
+                                <div class="tech-pipeline-line">
+                                    <div class="tech-pipeline-arrow"></div>
+                                </div>
+                                <div class="tech-node" style="--delay:0">
+                                    <div class="tech-node-icon"><i class="fab fa-react"></i></div><span
+                                        class="tech-node-name">React</span>
+                                </div>
+                                <div class="tech-node" style="--delay:1">
+                                    <div class="tech-node-icon"><i class="fas fa-rocket"></i></div><span
+                                        class="tech-node-name">Express.js</span>
+                                </div>
+                                <div class="tech-node" style="--delay:2">
+                                    <div class="tech-node-icon"><i class="fas fa-database"></i></div><span
+                                        class="tech-node-name">PostgreSQL</span>
+                                </div>
+                                <div class="tech-node" style="--delay:3">
+                                    <div class="tech-node-icon"><i class="fab fa-paypal"></i></div><span
+                                        class="tech-node-name">PayPal API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-card-layout">
+                        <div class="project-card-info">
+                            <div class="project-number">03</div>
+                            <h3 class="project-title">eSim AI Chatbot</h3>
+                            <p class="project-role">Chatbot Developer — FOSSEE, IIT Bombay</p>
+                            <p class="project-desc">
+                                Contributed to an AI-powered chatbot for the eSim project at FOSSEE, IIT Bombay.
+                                Integrated Qwen and LLaVA models for intelligent, context-aware, and multimodal
+                                responses.
+                            </p>
+                            <ul class="project-features">
+                                <li>Large Language Model integration</li>
+                                <li>Context-aware multimodal responses</li>
+                                <li>Open-source development practices</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/gauravgupta654" target="_blank" rel="noopener"
+                                    class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech-graph">
+                            <div class="tech-graph-label">Tech Stack</div>
+                            <div class="tech-pipeline">
+                                <div class="tech-pipeline-line">
+                                    <div class="tech-pipeline-arrow"></div>
+                                </div>
+                                <div class="tech-node" style="--delay:0">
+                                    <div class="tech-node-icon"><i class="fab fa-python"></i></div><span
+                                        class="tech-node-name">Python</span>
+                                </div>
+                                <div class="tech-node" style="--delay:1">
+                                    <div class="tech-node-icon"><i class="fas fa-brain"></i></div><span
+                                        class="tech-node-name">LLMs</span>
+                                </div>
+                                <div class="tech-node" style="--delay:2">
+                                    <div class="tech-node-icon"><i class="fas fa-robot"></i></div><span
+                                        class="tech-node-name">Ollama</span>
+                                </div>
+                                <div class="tech-node" style="--delay:3">
+                                    <div class="tech-node-icon"><i class="fas fa-comments"></i></div><span
+                                        class="tech-node-name">Qwen</span>
+                                </div>
+                                <div class="tech-node" style="--delay:4">
+                                    <div class="tech-node-icon"><i class="fas fa-eye"></i></div><span
+                                        class="tech-node-name">LLaVA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> experience.log</span>
+                <h2 class="section-title">Professional<br>Journey</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">internship</div>
+                        <h3>Chatbot Development Intern</h3>
+                        <h4>FOSSEE, IIT Bombay</h4>
+                        <p>
+                            Contributed to the development of an AI-powered chatbot for the eSim project.
+                            Developed and enhanced chatbot features to assist users with eSim-related queries
+                            using Large Language Models. Integrated Qwen and LLaVA models for intelligent,
+                            context-aware, and multimodal responses. Collaborated with the development team
+                            using Git and GitHub while following open-source development practices.
+                        </p>
+                        <div class="timeline-tech">
+                            <span>Python</span><span>LLMs</span><span>Ollama</span><span>Git</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">open-source</div>
+                        <h3>GSSoC Extended Contributor</h3>
+                        <h4>GirlScript Summer of Code</h4>
+                        <p>
+                            Contributed to open-source repositories by fixing bugs and submitting pull requests.
+                            Collaborated with maintainers using Git and GitHub to improve project quality and codebase
+                            stability.
+                        </p>
+                        <div class="timeline-tech">
+                            <span>Git</span><span>GitHub</span><span>Open Source</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-graduation-cap"></i> education.yml</span>
+                <h2 class="section-title">Academic<br>Background</h2>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon"><i class="fas fa-university"></i></div>
+                    <div class="education-info">
+                        <h3>VIT Bhopal University</h3>
+                        <p class="education-degree">B.Tech in Computer Science (AI & ML)</p>
+                        <p class="education-year">2023 – 2027</p>
+                    </div>
+
+                </div>
+                <div class="education-card">
+                    <div class="education-icon"><i class="fas fa-school"></i></div>
+                    <div class="education-info">
+                        <h3>Shanti Dham School</h3>
+                        <p class="education-degree">Senior Secondary (Class XII)</p>
+                        <p class="education-year">2022</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-envelope"></i> contact.sh</span>
+                <h2 class="section-title">Let's Work<br>Together</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="contact-text">
+                        I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
+                        feel free to reach out!
+                    </p>
+                    <div class="contact-details">
+                        <a href="mailto:gauravgupta662454@gmail.com" class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-item-label">Email</span>
+                                <span class="contact-item-value">gauravgupta662454@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+919026111018" class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span class="contact-item-label">Phone</span>
+                                <span class="contact-item-value">+91-9026111018</span>
+                            </div>
+                        </a>
+                        <a href="https://vibexpert.shop" target="_blank" rel="noopener" class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-globe"></i></div>
+                            <div>
+                                <span class="contact-item-label">Website</span>
+                                <span class="contact-item-value">vibexpert.shop</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/gauravgupta654" target="_blank" rel="noopener"
+                            class="contact-social" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/gaurav-gupta-960027286/" target="_blank" rel="noopener"
+                            class="contact-social" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://leetcode.com/u/gauravgupta654/" target="_blank" rel="noopener"
+                            class="contact-social" aria-label="LeetCode">
+                            <i class="fas fa-code"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-terminal">
+                    <div class="editor-titlebar">
+                        <div class="editor-dots"><span></span><span></span><span></span></div>
+                        <div class="editor-tab"><i class="fas fa-terminal"></i> send-message.sh</div>
+                    </div>
+                    <form class="contact-form" id="contactForm"
+                        action="https://formsubmit.co/gauravgupta662454@gmail.com" method="POST">
+                        <!-- FormSubmit config -->
+                        <input type="hidden" name="_subject" value="New Portfolio Contact Message!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="text" name="_honey" style="display:none">
+                        <p class="terminal-prompt"><span>gaurav@portfolio</span> ~ % ./send-message --interactive</p>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>send message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Crafted with <i class="fas fa-heart" style="color: #fb7185;"></i> and code — © 2025 Gaurav Gupta</p>
+                <div class="footer-links">
+                    <a href="https://github.com/gauravgupta654" target="_blank" rel="noopener"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/gaurav-gupta-960027286/" target="_blank" rel="noopener"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:gauravgupta662454@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Command Palette -->
+    <div class="cmdk-overlay" id="cmdkOverlay">
+        <div class="cmdk-panel">
+            <div class="cmdk-input-row">
+                <i class="fas fa-terminal"></i>
+                <input type="text" id="cmdkInput" placeholder="Type a command or search…" autocomplete="off">
+                <kbd>ESC</kbd>
+            </div>
+            <ul class="cmdk-list" id="cmdkList"></ul>
+        </div>
+    </div>
+
+    <script src="ballpit.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
