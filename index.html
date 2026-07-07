@@ -51,12 +51,8 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <!-- Ballpit Canvas Background -->
-        <div id="ballpit-container"
-            style="position: absolute; inset: 0; overflow: hidden; pointer-events: auto; z-index: 1;">
-            <canvas id="ballpit-canvas" style="display: block; width: 100%; height: 100%;"></canvas>
-        </div>
-        <div class="hero-bg-grid" style="z-index: 0;"></div>
+        <canvas class="section-bg-canvas"></canvas>
+        <div class="hero-bg-grid"></div>
         <div class="hero-content">
             <div class="hero-editor-window animate-in">
                 <div class="editor-titlebar">
@@ -119,6 +115,7 @@
 
     <!-- About Section -->
     <section class="section about" id="about">
+        <canvas class="section-bg-canvas"></canvas>
         <div class="container">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-user"></i> about.md</span>
@@ -201,6 +198,7 @@
 
     <!-- Skills Section -->
     <section class="section skills" id="skills">
+        <canvas class="section-bg-canvas"></canvas>
         <div class="container">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-cogs"></i> skills.json</span>
@@ -293,6 +291,7 @@
 
     <!-- Projects Section -->
     <section class="section projects" id="projects">
+        <canvas class="section-bg-canvas"></canvas>
         <div class="container">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-rocket"></i> projects.tsx</span>
@@ -470,6 +469,7 @@
 
     <!-- Experience Section -->
     <section class="section experience" id="experience">
+        <canvas class="section-bg-canvas"></canvas>
         <div class="container">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-briefcase"></i> experience.log</span>
@@ -516,6 +516,7 @@
 
     <!-- Education Section -->
     <section class="section education" id="education">
+        <canvas class="section-bg-canvas"></canvas>
         <div class="container">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-graduation-cap"></i> education.yml</span>
@@ -546,6 +547,7 @@
 
     <!-- Contact Section -->
     <section class="section contact" id="contact">
+        <canvas class="section-bg-canvas"></canvas>
         <div class="container">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-envelope"></i> contact.sh</span>
@@ -658,7 +660,7 @@
         </div>
     </div>
 
-    <script src="ballpit.js"></script>
+    <script src="bg-animations.js"></script>
     <script src="script.js"></script>
 </body>
 
