@@ -138,14 +138,15 @@ setTimeout(() => {
 
 // === Interactive Skills Section ===
 const skillsData = {
-    "React": { icon: "fab fa-react", projects: [{ name: "VibExpert Shop", role: "Front-End", link: "https://vibexpert.shop" }, { name: "CarPooling", role: "Full-Stack", link: "https://github.com/gauravgupta654" }] },
+    "React": { icon: "fab fa-react", projects: [{ name: "VibExpert Shop", role: "Front-End", link: "https://vibexpert.shop" }, { name: "VibePool", role: "Full-Stack", link: "https://vibe-pool-book.vercel.app/" }] },
     "JavaScript": { icon: "fab fa-js-square", projects: [{ name: "VibExpert Shop", role: "Front-End", link: "https://vibexpert.shop" }] },
     "Python": { icon: "fab fa-python", projects: [{ name: "eSim AI Chatbot", role: "AI Developer", link: "https://github.com/gauravgupta654" }] },
     "HTML5": { icon: "fab fa-html5", projects: [{ name: "VibExpert Shop", role: "Front-End", link: "https://vibexpert.shop" }] },
     "CSS3": { icon: "fab fa-css3-alt", projects: [{ name: "VibExpert Shop", role: "Front-End", link: "https://vibexpert.shop" }] },
     "REST APIs": { icon: "fas fa-plug", projects: [{ name: "VibExpert Shop", role: "Front-End", link: "https://vibexpert.shop" }] },
-    "Express.js": { icon: "fas fa-rocket", projects: [{ name: "CarPooling", role: "Full-Stack", link: "https://github.com/gauravgupta654" }] },
-    "PostgreSQL": { icon: "fas fa-elephant", projects: [{ name: "CarPooling", role: "Full-Stack", link: "https://github.com/gauravgupta654" }] },
+    "Express.js": { icon: "fas fa-rocket", projects: [{ name: "VibePool", role: "Full-Stack", link: "https://vibe-pool-book.vercel.app/" }] },
+    "PostgreSQL": { icon: "fas fa-elephant", projects: [{ name: "VibePool", role: "Full-Stack", link: "https://vibe-pool-book.vercel.app/" }] },
+    "Node.js": { icon: "fab fa-node-js", projects: [{ name: "VibePool", role: "Full-Stack", link: "https://vibe-pool-book.vercel.app/" }] },
     "LLMs": { icon: "fas fa-comments", projects: [{ name: "eSim AI Chatbot", role: "AI Developer", link: "https://github.com/gauravgupta654" }] },
     "Machine Learning": { icon: "fas fa-robot", projects: [{ name: "eSim AI Chatbot", role: "AI Developer", link: "https://github.com/gauravgupta654" }] }
 };
